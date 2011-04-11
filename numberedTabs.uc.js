@@ -23,11 +23,16 @@
         }
     }
 
-    function updateAll() {
+    function updateAll(event) {
+        var skip = false;
         for(var i = 0; i < container.childNodes.length; ++i) {
             var tab = container.childNodes[i];
-            tab.label = String(i + 1) + "  " + tab.label.replace(stripPat, "");
-            tab.tabIndex = i + 1;
+            if(event.type == "TabClose" && tab == event.target) {
+                skip = true;
+                continue;
+            }
+            tab.tabIndex = i + (skip ? 0 : 1);
+            tab.label = String(tab.tabIndex) + "  " + tab.label.replace(stripPat, "");
         }
     }
 

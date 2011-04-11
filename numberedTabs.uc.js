@@ -35,9 +35,5 @@
     container.addEventListener("TabOpen", updateAll, false);
     container.addEventListener("TabMove", updateAll, false);
     container.addEventListener("TabClose", updateAll, false);
-
-    window.addEventListener("load", function() {
-        gBrowser.addEventListener("load", function() { window.setTimeout(update, 500); }, true)
-    }, true);
 })();
 

@@ -1,0 +1,22 @@
+Numbered Tabs is a small userChrome.js (http://userchromejs.mozdev.org/)
+script that adds and maintains index numbers to tab labels in Firefox.
+
+
+Installation
+------------
+Install the userChromeJS extension if not already installed.
+Insert the contents of numberedTabs.uc.js into
+[profiledir]/chrome/userChrome.js, creating the file if it
+does not exist yet.
+Restart Firefox.
+
+
+Authors
+-------
+Antti Tuppurainen <atbaaba@gmail.com>
+
+
+License
+-------
+Read LICENSE
+
